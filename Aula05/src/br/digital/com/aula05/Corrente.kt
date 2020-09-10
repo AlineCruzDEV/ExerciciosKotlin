@@ -23,6 +23,7 @@ class Corrente (
                 limiteChequeEspecial -= (valor - saldo)
                 saldo = 0.0
                 println("Novo saldo: R$$saldo")
+                println("Novo saldo Cheque especial: R$ $limiteChequeEspecial")
                 println()
             } else {
                 saldo -= valor
