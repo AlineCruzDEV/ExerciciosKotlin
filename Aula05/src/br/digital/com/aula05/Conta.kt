@@ -29,6 +29,7 @@ open class Conta (
     }
 
     open fun consultaSaldo (){
+        println("Transacao: Consulta Saldo")
         println("Saldo da conta $numeroDaConta: $saldo")
         println()
     }

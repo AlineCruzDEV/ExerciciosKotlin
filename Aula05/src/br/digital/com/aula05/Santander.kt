@@ -1,6 +1,11 @@
 package br.digital.com.aula05
 
 fun main() {
+
+    println("--------------------------------")
+    println("Bem vindo ao Banco Santander")
+    println("--------------------------------")
+
     val cliente1 = Cliente(1,"Joao", "Felipe", "1452525", "01221441225")
     val cliente2 = Cliente(2,"Vitoria", "Goncalves", "654645", "65445665425")
 
@@ -10,6 +15,7 @@ fun main() {
     poupanca.recolherJuros()
     poupanca.saque(2700.04)
     poupanca.saque(100.0)
+    poupanca.consultaSaldo()
 
 
     println("--------------------------------")
@@ -19,5 +25,6 @@ fun main() {
     corrente.deposito(3000.0)
     corrente.saque(4800.0)
     corrente.depositaCheque(Cheque(3000.0,"Santender", "12/09/2020"))
+    corrente.consultaSaldo()
 
 }
