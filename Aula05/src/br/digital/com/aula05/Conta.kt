@@ -1,6 +1,6 @@
 package br.digital.com.aula05
 
-class Conta (
+open class Conta (
         var numeroDaConta: Int,
         var saldo: Double,
         var titular: Cliente
@@ -9,14 +9,14 @@ class Conta (
         println("Conta de numero $numeroDaConta - gerada com saldo $saldo - para Cliente ${titular.nome} ${titular.sobrenome}")
         println()
     }
-    fun deposito (valor : Double) {
+    open fun deposito (valor : Double) {
         saldo += valor
         println("Transacao: deposito de R$$valor")
         println("Novo saldo: R$$saldo")
         println()
     }
 
-    fun saque (valor: Double) {
+    open fun saque (valor: Double) {
         println("Transacao: saque de R$$valor")
         if (valor > saldo) {
             println("Saldo insuficiente")
@@ -26,5 +26,10 @@ class Conta (
             println("Novo saldo: R$$saldo")
             println()
         }
+    }
+
+    open fun consultaSaldo (){
+        println("Saldo da conta $numeroDaConta: $saldo")
+        println()
     }
 }
