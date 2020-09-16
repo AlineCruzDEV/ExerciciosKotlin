@@ -1,9 +1,10 @@
 package com.digital.recebivel
 
 class Servico : IRecebivel {
-    var descricao : String = "teste2"
-    var horas : Int = 0
-    var precoHora : Double = 0.0
+
+    private var descricao : String = ""
+    private var horas : Int = 1
+    private var precoHora : Double = 0.0
 
     fun servico(descricao : String, horas : Int, precoHora : Double){
         this.descricao = descricao
@@ -18,5 +19,4 @@ class Servico : IRecebivel {
     override fun totalizarReceita(): Double {
         return horas * precoHora
     }
-
 }
